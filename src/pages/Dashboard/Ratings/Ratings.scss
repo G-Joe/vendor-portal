@@ -1,0 +1,35 @@
+@use "src/styles/partials/colors";
+
+
+.ratings {
+    background: colors.$white;
+    box-shadow: 0px 0px 0 1pxpx rgba(0, 0, 0, 0.08),
+      0px 6px 24px rgba (0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 18px 10px 18px 18px;
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 18px;
+      }
+      Button {
+        width: 180px;
+      }
+    }
+  }
+
+  .review-details{
+    h3{
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 25px;
+
+      span{
+        color: colors.$primary;
+      }
+    }
+  }

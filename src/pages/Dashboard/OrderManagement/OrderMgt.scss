@@ -1,0 +1,240 @@
+@use "src/styles/partials/colors";
+
+.order-mgt {
+  background: colors.$white;
+  box-shadow: 0px 0px 0 1pxpx rgba(0, 0, 0, 0.08),
+    0px 6px 24px rgba (0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 18px 10px 18px 18px;
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 18px;
+    }
+    Button {
+      width: 180px;
+    }
+  }
+}
+
+.outlet-table {
+  .filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    .search {
+      width: 1800px;
+    }
+    .date {
+      width: 700px;
+    }
+    Button {
+      width: 300px;
+      height: 48px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-list {
+  gap: 80px;
+  color: colors.$grey_300;
+  font-weight: 400;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: colors.$primary;
+}
+
+.ant-tabs-tab-btn:hover {
+  color: colors.$primary;
+}
+
+.completed-orders {
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 18px;
+    span {
+      color: colors.$primary;
+    }
+  }
+
+  .completed {
+    background: colors.$white;
+    box-shadow: 0px 0px 0 1pxpx rgba(0, 0, 0, 0.08),
+      0px 6px 24px rgba (0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 18px 0px 18px 0px;
+    margin-top: 25px;
+
+    h1 {
+      font-weight: 300;
+      color: colors.$grey_300;
+      font-size: 20px;
+      padding-left: 18px;
+
+      span {
+        font-weight: 500;
+        color: colors.$black;
+      }
+    }
+
+    .order-table {
+      margin: 16px 0px;
+      border-bottom: 1px solid colors.$grey_250;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        background-color: colors.$grey_200;
+        color: colors.$grey_300;
+        font-weight: 400;
+        padding: 12px 0px;
+        text-align: left;
+        padding-left: 18px;
+      }
+      td {
+        text-align: left;
+        padding-left: 18px;
+        font-weight: 400;
+      }
+      .phone {
+        display: flex;
+        img {
+          margin-right: 8px;
+          margin-top: 16px;
+          margin-bottom: 5px;
+        }
+        p {
+          margin-top: 53px;
+        }
+      }
+    }
+    Button {
+      width: 350px;
+      margin: 30px 0px 23px 18px;
+      box-shadow: 0px 8px 24px -4px rgba(43, 217, 199, 0.4);
+    }
+    .cancel-reason {
+      padding: 18px 167px 50px 18px;
+
+      Input{
+        height: 67px;
+      }
+    }
+  }
+}
+
+.tracker {
+  padding: 0px 18px;
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .item-history {
+    .ant-steps-item-subtitle {
+      display: table;
+      margin-left: -0px;
+      margin-top: -5px;
+    }
+    p {
+      font-weight: 500;
+      font-weight: 14px;
+      margin-bottom: 4px;
+    }
+
+    .ant-steps
+      .ant-steps-item-process
+      .ant-steps-item-icon
+      > .ant-steps-icon
+      .ant-steps-icon-dot {
+      background: colors.$grey_300;
+    }
+
+    .ant-steps
+      .ant-steps-item-finish
+      .ant-steps-item-icon
+      > .ant-steps-icon
+      .ant-steps-icon-dot {
+      background: colors.$primary;
+    }
+
+    .ant-steps-item-container
+      > .ant-steps-item-content
+      > .ant-steps-item-title {
+      font-weight: 500;
+      font-size: 14px;
+      color: colors.$black;
+    }
+
+    .ant-steps-item-finish
+      > .ant-steps-item-container
+      > .ant-steps-item-content
+      > .ant-steps-item-title {
+      color: colors.$primary;
+    }
+    .ant-steps-item-wait
+      > .ant-steps-item-container
+      > .ant-steps-item-content
+      > .ant-steps-item-title {
+      color: colors.$secondary;
+    }
+  }
+  .status {
+    font-weight: 400;
+    color: #4caf50;
+    height: 43px;
+    padding: 10px 8px;
+    border-radius: 5px;
+    background-color: #edf7ed;
+  }
+  .pending-status {
+    font-weight: 400;
+    color: colors.$orange_800;
+    height: 43px;
+    padding: 10px 8px;
+    border-radius: 5px;
+    background-color: #fff5e5;
+  }
+  .cancel-status{
+    font-weight: 400;
+    color: colors.$red;
+    height: 43px;
+    padding: 10px 8px;
+    border-radius: 5px;
+    background-color:#feeceb;
+  }
+}
+
+.reason {
+  background: colors.$white !important;
+  border-radius: 10px;
+  min-width: 500px;
+  padding: 0px 46px 46px 46px;
+  height: 300px;
+
+  p {
+    font-weight: 500;
+    margin-bottom: 37px;
+    font-size: 16px;
+    padding: 17px 0px;
+  }
+
+  .form-group .input-wrapper input,
+  .form-group .input-wrapper select {
+    height: 84px;
+  }
+}

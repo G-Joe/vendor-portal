@@ -1,0 +1,209 @@
+@use "src/styles/partials/colors";
+
+.product-mgt {
+  .top {
+    text-align: right;
+    h3 {
+      font-weight: 500;
+      font-size: 14px;
+      margin-top: 20px;
+
+      span {
+        color: colors.$primary;
+      }
+    }
+    Button {
+      width: 250px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .product-mgt-content {
+    background: colors.$white;
+    box-shadow: 0px 0px 0 1pxpx rgba(0, 0, 0, 0.08),
+      0px 6px 24px rgba (0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 25px 10px 18px 18px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .ant-tabs .ant-tabs-ink-bar {
+    background: colors.$primary;
+  }
+}
+
+.bulk-upload {
+  padding-bottom: 77px;
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 25px;
+
+    span {
+      color: colors.$primary;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 14px 0px;
+    font-weight: 400;
+    color: colors.$grey_300;
+    span {
+      color: colors.$black;
+    }
+  }
+
+  .add-image {
+    width: 400px;
+
+    .ant-upload-wrapper .ant-upload-drag:hover {
+      border: 1px dashed colors.$primary;
+    }
+  }
+  .product-mgt-content {
+    background: colors.$white;
+    box-shadow: 0px 0px 0 1pxpx rgba(0, 0, 0, 0.08),
+      0px 6px 24px rgba (0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 18px 10px 18px 18px;
+  }
+
+  .checkbox {
+    display: flex;
+    gap: 7px;
+
+    Input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      height: 15px;
+      width: 15px;
+      background-color: colors.$white;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      cursor: pointer;
+      padding-left: 0px;
+    }
+
+    Input[type="checkbox"]:after {
+      content: url("https://d11ylb77sv0744.cloudfront.net/images/svgs/white_tick.svg");
+      font-size: 9px;
+      margin-top: 2px;
+      margin-left: 1px;
+      display: none;
+      position: absolute;
+    }
+
+    Input[type="checkbox"]:hover {
+      background-color: colors.$primary_light !important;
+    }
+
+    Input[type="checkbox"]:checked {
+      background-color: colors.$primary !important;
+    }
+
+    Input[type="checkbox"]:checked:after {
+      display: block;
+    }
+
+    p {
+      margin-top: 12px;
+    }
+  }
+
+  .action-button {
+    width: 350px;
+  }
+}
+
+.product-table {
+  .ant-table-wrapper .ant-table-column-sorter-up.active,
+  .ant-table-wrapper .ant-table-column-sorter-down.active {
+    color: colors.$primary;
+  }
+  .ant-table-thead tr th {
+    background-color: colors.$primary_light;
+    color: colors.$grey_300;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .ant-table-tbody {
+    color: colors.$grey_300;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .ant-pagination .ant-pagination-item-active a {
+    color: colors.$primary;
+  }
+  li.ant-pagination .ant-pagination-item-active {
+    color: colors.$primary !important;
+  }
+  .ant-table-wrapper .ant-table-pagination.ant-pagination {
+    margin: 0px;
+    padding: 16px 0px;
+  }
+  .ant-pagination .ant-pagination-item-active {
+    border-color: colors.$primary;
+  }
+  .ant-table-wrapper .ant-table-tbody > tr.ant-table-row-selected > td {
+    background: colors.$primary_light;
+  }
+  .ant-checkbox-checked:after{
+    border: 2px solid colors.$primary !important;
+  }
+  
+  .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: colors.$primary;
+    border-color: colors.$primary;
+  }
+  .ant-checkbox-indeterminate .ant-checkbox-inner:after{
+    background-color: colors.$primary;
+  }
+  .filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    .search {
+      width: 585px;
+    }
+    .date {
+      width: 238px;
+    }
+    Button {
+      width: 120px;
+      height: 48px;
+      margin-top: 15px;
+    }
+  }
+ 
+}
+
+
+  .edit-product-modal{
+    min-width: 411px;
+    background: colors.$white;
+    border-radius: 10px;
+    h3{
+      background-color: colors.$grey_200;
+      padding: 14px 0px 14px 48px;
+      border-radius: 10px 10px 0px 0px;
+      font-weight: 500;
+    }
+
+    .form{
+      padding: 16px 35px;
+    }
+
+    .edit-submit{
+      display: flex;
+      gap: 8px;
+      padding: 10px 32px 41px 32px;
+    }
+  }
+
+

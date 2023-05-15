@@ -1,0 +1,56 @@
+@use "src/styles/partials/colors";
+
+.order-mgt {
+  .heading {
+    .actions {
+      display: flex;
+      gap: 15px;
+    }
+  }
+}
+
+.create-outlet-modal {
+  background-color: colors.$white;
+  border-radius: 10px;
+  min-width: 790px;
+  height: 653px;
+  padding: 14px 48px 32px 48px;
+  .topper {
+    display: flex;
+    gap: 15px;
+
+    .left {
+      width: 100%;
+    }
+
+    .right {
+      width: 100%;
+    }
+  }
+  .bottom {
+    display: flex;
+    gap: 15px;
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+  }
+  .details{
+    text-align: center;
+    font-weight: 500;
+  }
+  .submit{
+    width: 350px;
+    margin:auto;
+  }
+
+  .edit-submit{
+    display: flex;
+    gap: 32px;
+  }
+  h3{
+    font-weight: 500;
+  }
+}
