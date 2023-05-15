@@ -1,5 +1,5 @@
 import mobilePhoneId from "assets/icons/mobile_phone_identifier.svg";
-import tabletId from "assets/icons/tablet_identifier.svg";
+import tabId from "assets/icons/tablet_identifier.svg";
 import phoneAccessories from "assets/icons/phone_accessories_identifier.svg";
 import tabletAccessories from "assets/icons/tablet_accessories.svg";
 import "./home.scss";
@@ -13,7 +13,7 @@ const data = [
   },
   {
     id: 2,
-    color: tabletId,
+    color: tabId,
     category: "Tablet",
     percentage: "40%",
   },
