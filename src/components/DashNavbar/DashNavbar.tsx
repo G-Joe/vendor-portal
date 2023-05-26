@@ -27,7 +27,7 @@ const data = [
     img: mercy,
     name: "Mercy Gaga",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industryyyy...",
     time: "50 Mins Ago",
     status:  <NotificationButton label="Read" variant="read"/>,
   },

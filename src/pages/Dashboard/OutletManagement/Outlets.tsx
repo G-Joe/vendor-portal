@@ -10,6 +10,11 @@ import Select from "components/Input/Select";
 import searchIcon from "assets/icons/search_icon.svg";
 
 const OutletOrders = () => {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleOptionSelected = (option: string) => {
+    setSelectedOption(option);
+  };
   const columns = [
     {
       title: "S/N",
@@ -123,7 +128,7 @@ const OutletOrders = () => {
 
   const SuccessModal = () => {
     setModalOpen(false);
-    statusModal.onOpen()
+    statusModal.onOpen();
   };
 
   const Deactivate = () => {
@@ -181,17 +186,24 @@ const OutletOrders = () => {
               <br />
             </div>
             <div className="right">
-              <Select label="Select Outlet State">
-                <option value=""></option>
-              </Select>
+              <Select
+                options={["Option 1", "Option 2", "Option 3", "Option 4"]}
+                onOptionSelected={handleOptionSelected}
+                label="Select Outlet State"
+              />
               <br />
-              <Select label="Select Outlet Location">
-                <option value=""></option>
-              </Select>
+              <Select
+                options={["Option 1", "Option 2", "Option 3", "Option 4"]}
+                onOptionSelected={handleOptionSelected}
+                label="Select Outlet Location"
+              />
+
               <br />
-              <Select label="Outlet Address">
-                <option value=""></option>
-              </Select>
+              <Select
+                options={["Option 1", "Option 2", "Option 3", "Option 4"]}
+                onOptionSelected={handleOptionSelected}
+                label="Outlet Address"
+              />
             </div>
             <br />
           </div>
@@ -206,13 +218,20 @@ const OutletOrders = () => {
             </div>
           </div>
           <br />
-          <Select label="Status">
-            <option></option>
-          </Select>
+          <Select
+            options={["Option 1", "Option 2", "Option 3", "Option 4"]}
+            onOptionSelected={handleOptionSelected}
+            label="Status"
+          />
+
           <br />
           <div className="edit-submit">
             <Button label="UPDATE" variant="primary" onClick={SuccessModal} />
-            <Button label="DEACTIVATE" variant="secondary" onClick={Deactivate}/>
+            <Button
+              label="DEACTIVATE"
+              variant="secondary"
+              onClick={Deactivate}
+            />
           </div>
         </Modal>
       </div>
@@ -224,15 +243,14 @@ const OutletOrders = () => {
         isOpen={statusModal.isOpen}
         onClose={statusModal.onClose}
       />
-       <ConfirmModal
-            question2="You are about to deactivate this outlet, please note that this outlet will not be visible to the users for pick up once deactivated. Are you sure you want to carry out this action?"
-            confirmSuccessMessage="Outlet Deactivated"
-            isOpen={confirmModal.isOpen}
-            onClose={confirmModal.onClose}
-          />
+      <ConfirmModal
+        question2="You are about to deactivate this outlet, please note that this outlet will not be visible to the users for pick up once deactivated. Are you sure you want to carry out this action?"
+        confirmSuccessMessage="Outlet Deactivated"
+        isOpen={confirmModal.isOpen}
+        onClose={confirmModal.onClose}
+      />
     </div>
   );
 };
 
 export default OutletOrders;
-

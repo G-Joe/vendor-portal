@@ -11,6 +11,11 @@ import searchIcon from "assets/icons/search_icon.svg";
 import "./product_mgt.scss";
 
 const Products = () => {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleOptionSelected = (option: string) => {
+    setSelectedOption(option);
+  };
   const columns = [
     {
       title: "S/N",
@@ -172,17 +177,26 @@ const Products = () => {
           <h3>Edit Product</h3>
           <br />
           <div className="form">
-            <Select label="Product Category">
-              <option></option>
-            </Select>
+            <Select
+              options={["Option 1", "Option 2", "Option 3", "Option 4"]}
+              onOptionSelected={handleOptionSelected}
+              label="Product Category"
+            />
+
             <br />
-            <Select label="Product Brand">
-              <option></option>
-            </Select>
+            <Select
+              options={["Option 1", "Option 2", "Option 3", "Option 4"]}
+              onOptionSelected={handleOptionSelected}
+              label="Product Brand"
+            />
+
             <br />
-            <Select label="Product Name">
-              <option></option>
-            </Select>
+            <Select
+              options={["Option 1", "Option 2", "Option 3", "Option 4"]}
+              onOptionSelected={handleOptionSelected}
+              label="Product Name"
+            />
+
             <br />
             <Input label="Amount" type="text" leftIcon={Naira} withFlag />
             <br />
